@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<title>Document</title>
+	<style type="text/css">
+		.active{
+			color: #007bff!important;
+		}
+
+		#navbarNavAltMarkup{
+			transition: .3s;
+		}
+		.square{
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-color: rgba(80,60,180);
+			align-self: center;
+			
+
+		}
+		.bg-brown{
+			background-color: rgba(238,231,224);
+		}
+		
+
+		.pr{
+			position: relative;
+		}
+		.fontb{
+			font-family: 'Anton', sans-serif;
+			font-size: 22px;
+		}
+		.fontn{
+			font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+		}
+		.name{
+			display: flex;
+		}
+		
+		.intro .title{
+			margin-top: 150px;
+			margin-left: 50px;
+			margin-bottom: 0;
+			font-size: 64px;
+		}
+		.intro .title-sm{
+			margin-left: 50px;
+			font-size: 18px;	
+
+		}
+		.bt-link{
+			margin-left: 50px;
+			display: flex;
+			margin-top: 50px;
+
+		}
+		.bt-link a{
+			padding: 2px 20px;
+			border-radius: 50px;
+			margin-right: 20px;
+			border:1px solid #000;
+			transition: .3s;
+		}
+		.bt-link .f-btn{
+			border:none;
+			background-color: #007bff;
+			color: #fff;
+			border:1px solid #007bff;
+		}
+		.bt-link .f-btn:hover{
+			border:1px solid #007bff;
+			background-color: #fff;
+			color:#000;
+		}
+		.bt-link  .sec-btn:hover{
+			background-color: #007bff;
+			border:1px solid #007bff;
+			color: #fff;
+
+
+		}
+		.p-intro{
+			max-width: 300px;
+			margin-left: 50px;
+			margin-top: 50px;
+		}
+		.p-intro .sp{
+			line-height: 2.0;
+		}
+		.footer{
+			padding: 30px 50px 0;
+		}
+		.footer .copyright p{
+			margin-bottom: 0;
+		}
+		.footer .contact{
+
+			display: flex;
+			justify-content: flex-end;
+		}
+		.footer .contact p{
+			line-height: 32px;
+		}
+		.contact .item{
+			margin: 0 15px;
+			text-align: center;
+		}
+		.item h3{
+			font-size: 16px;
+		}
+		.item p{
+			font-size: 12px;
+		}
+		.item .icon{
+			display: flex;
+		}
+		.item a{
+			display: block;
+			padding: 0 5px;
+			text-decoration: none;
+			color: #000;
+		}
+		.title-row{
+			margin:  0;
+		}
+		.pr{
+			position: relative;
+		}
+		.self-doc{
+			position: absolute;
+			width: 280px;
+			top: -20px;	
+			left: -260px;	
+			box-shadow:5px 5px  10px rgba(0,0,0,0.6);
+	
+		}
+		.self-doc .pic{
+			width: 65%;
+			height: 170px;
+			background: url("https://d3cm515ijfiu6w.cloudfront.net/wp-content/uploads/2019/10/10074217/Charles-Leclerc-PA.jpg") 70% 30% ;
+			background-size: cover;
+			margin: 0 auto  20px;
+			border-radius: 50%;
+
+				
+			
+		}
+		
+		.self-doc-txt{
+			background-color:rgba( 238,231,224);
+			padding: 30px 10px;
+		}
+		.self-doc-txt .txt{
+			width: 100%;
+			text-align: center;
+
+		}
+		.self-doc-txt .txt h2{
+			font-weight: bold;
+		}
+		.self-doc-txt .txt::after{
+			content: "";
+			display: block;
+			width: 20%;
+			margin:30px auto;
+			height: 1px;
+
+			background-color: #007bff;
+			
+			
+		}
+		.job{
+			text-align: center;
+			letter-spacing: 0.25em;
+
+		}
+		.self-doc-contact{
+			padding: 10px 0;
+			display: flex;
+			background-color:#fff;
+			justify-content: center; 
+		}
+		.self-doc-contact a{
+			text-decoration: none;
+			display: block;
+			padding: 0 20px;
+			color: #000;
+		}
+		.posfix{
+				position: fixed;
+				top: 0;
+				
+				width: 100%;
+				z-index: 1;
+				box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+			}
+
+		@media screen and (max-width: 645px) {
+			.row{
+				justify-content: center;
+				
+			}
+
+			.navbar{
+				padding: 0.5rem ;
+			}
+
+			.intro .title{
+				margin: 20px 0 0;
+
+			}
+			.intro .title-sm{
+				margin: 20px auto ;
+				text-align: center;
+			}
+			.content-title .title{
+				text-align: center;
+			}  
+			#bg{
+				display: none;
+			}
+			.self-doc{
+				
+				position: relative;
+				top: 0;
+				left: 50%;
+				right: 50%;
+				margin-left: -140px;
+				max-width: 280px;
+				
+				
+
+			}
+			.bt-link{
+				margin: 50px auto 0;
+				justify-content: center;
+			}
+			.p-intro{
+				margin: 30px auto 0;
+				max-width: 200px;
+			}
+			.p-intro .sp{
+				text-align: center;	
+
+			}
+			.footer{
+				background-color: #fff;
+				flex-direction: column;
+
+			}
+			.footer .order{
+				order: 2;
+			}
+			.footer .contact{
+				flex-direction: column;
+				
+			}
+			.footer .contact .icon{
+				justify-content: center;
+			}
+			.footer .w-100{
+				max-width: 100%;
+				text-align: center;
+			}
+			.copyright{
+				padding: 0 0 30px;
+			}
+			.rwd{
+				margin-top: 74.8px;
+				padding-top: 30px;
+
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav class="posfix navbar navbar-expand-lg navbar-light bg-light py-3  ">
+		<div class="name ml-4">
+			<div class="square"></div>
+		  <a class="navbar-brand   fontb ml-2" href="#">WIDIANSYAH<span class="fontn px-2">/ ORBIT FUTURE ACADEMY</span></a> 
+		</div>
+	  	
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-item nav-link  small active" href="cv.html">ABOUT ME <span class="sr-only">(current)</span></a>
+	      <a class="nav-item nav-link small " href="resume.html">RESUME</a>
+	      <a class="nav-item nav-link small " href="project.html">PROJECTS</a>
+
+	      
+	    </div>
+	  </div>
+	</nav>
+	<div class="container-fluid rwd bg-brown">
+		<div class="row ">
+			<div class="col-5    " id="bg">
+				
+			</div>
+			<div class=" pr col-7 intro pb-5">
+				<div class="content-title pr">	
+					<div class="self-doc">
+						<div class="self-doc-txt">
+							<div class="pic">
+								
+							</div>
+							<div class="txt">
+								<h2>MUHAMMAD<br>WIDIANSYAH</h2>
+							</div>
+							<div class="job">
+								<p>STUDENT AI MASTERY</p>
+							</div>
+						</div>
+						<div class="self-doc-contact">
+							<a href="https://www.facebook.com/widinsyah.widinsyah?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.instagram.com/widiansyah5.0/"><i class="fa fa-instagram"></i></a>
+							<a href="https://www.linkedin.com/in/muhammad-widiansyah-5b97a7236/"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+					<div class="title-row">
+						<h1 class=" title  font-weight-bold">Hello</h1>
+						<h2 class="title-sm">Here's who I am & what I do</h2>
+					</div>
+							
+				</div>
+				<div class="bt-link">
+					<a class="btn f-btn font-weight-bold" href="templates\resume.html" role="button">RESUME</a>
+					<a class="btn sec-btn font-weight-bold " href="templates\project.html" role="button">PROJECT</a>
+
+
+				</div>
+				<div class="p-intro">
+					<p>
+						I am a 6th semester student of Muhammadiyah University of Sukabumi, I am interested in becoming a developer in the field of artificial intelligence
+					</p>
+					<p class="font-8"></p>
+					<p class="sp">
+						Here I'll tell you about my experiences and my advantages.
+					</p>
+
+				</div>
+				
+		
+			</div>
+	<div class="container-fluid">
+		<div class="row footer">
+			<div class="col-4 order w-100 mt-3">
+				<div class="copyright">		
+					<p></p>
+				</div>
+			</div>
+			<div class="col-8 w-100">
+				<div class="contact">
+					<div class="item">
+						<h3>Call</h3>
+						<p>031346754357</p>
+					</div>
+					<div class="item">
+						<h3>email</h3>
+						<p>31diansyah@gmail.com</p>
+					</div>
+					<div class="item">
+						<h3>Follow</h3>
+						<div class="icon">
+							<a href="https://www.facebook.com/widinsyah.widinsyah?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.instagram.com/widiansyah5.0/"><i class="fa fa-instagram"></i></a>
+							<a href="https://www.linkedin.com/in/muhammad-widiansyah-5b97a7236/"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</body>
+</html>

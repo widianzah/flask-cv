@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<title>myResume</title>
+	<style type="text/css">
+		 .nav-item:hover{
+			color: #007bff!important;
+		}
+		.active{
+			color: #007bff!important;
+		}
+		.square{
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-color: #0050ff;
+			align-self: center;
+
+			
+
+		}
+		.square-bg{
+			display: block;
+			width: 15px;
+			height: 15px;
+			background-color: #0050ff;
+			align-self: center;
+			margin: 0 5px -2px;
+		}
+		.intro-bg{
+			background-color: rgba(198,191,184);
+
+		}
+
+		.pr{
+			position: relative;
+		}
+		.fontb{
+			font-family: 'Anton', sans-serif;
+			font-size: 22px;
+		}
+		.fontn{
+			font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+		}
+		.name{
+			display: flex;
+		}
+		#navbarNavAltMarkup{
+			transition: .3s;
+		}
+		
+		.posfix{
+				position: fixed;
+				top: 0;
+				
+				width: 100%;
+				z-index: 1;
+				box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+			}
+		.rwd{
+			margin-top: 74.8px;
+		}
+
+
+
+
+		.bg-brown{
+			background-color: rgba(230,218,206);
+		}
+
+		.container{
+			max-width: 700px;
+			margin: auto;
+		}
+
+		/*title*/
+		.title-row{
+			display: flex;
+			justify-content: center;
+			padding: 30px 0;
+		}
+		.title-row .title h3{
+			margin: 0;
+		}
+
+		.title-txt{
+			width: 100%;
+			margin: auto;	
+			text-align: center;
+		}
+
+		/* item*/
+		.content{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.content .item{
+			background-color: #fff;
+			box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+			margin: 0 0 30px;
+			display: flex; 
+			width: 100%;
+		}
+		.item .txt{
+			width: 50%;
+			
+		}
+		.item .txt .title{
+			display: flex;
+			padding: 60px 5px 30px 0;
+			
+		}
+		.item .txt .square-left{
+			min-height:30px ;
+			width: 10px;
+			background-color: #001bff;
+			margin-right: 30px;
+		}
+		.item .txt h4{
+			display: block;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.item .txt h5{
+			font-size: 14px;
+
+		}
+		.item .txt .paragraph{
+			padding: 0px 40px 60px;
+			line-height: 32px;
+		}
+		.item .txt .img-rwd{
+			width: 100%;
+
+			display: none;
+		}
+		img{
+			width: 100%;
+			vertical-align: middle;
+		}
+
+
+		.pic{
+			width: 50%;
+			background-image: url(https://i.ibb.co/fXyPGhx/123.png);
+			background-size: cover;
+			background-position: center;
+		}
+		.pic-1{
+			width: 50%;
+			background-image: url(https://i.ibb.co/bPTMrpP/1234.png);
+			background-size: cover;
+			background-position: center;
+		}
+		.pic-2{
+			width: 50%;
+			background-image: url(https://i.ibb.co/XtW5vZs/12345.png);
+			background-size: cover;
+			background-position: center;
+		}
+
+
+
+		.footer{
+			padding: 30px 50px 0;
+		}
+		.footer .copyright p{
+			margin-bottom: 0;
+		}
+		.footer .contact{
+
+			display: flex;
+			justify-content: flex-end;
+		}
+		.footer .contact p{
+			line-height: 32px;
+		}
+		.contact .item{
+			margin: 0 15px;
+			text-align: center;
+		}
+		.footer.item h3{
+			font-size: 16px;
+		}
+		.footer .item p{
+			font-size: 12px;
+		}
+		.footer .item .icon{
+			display: flex;
+		}
+		.item a{
+			display: block;
+			padding: 0 5px;
+			text-decoration: none;
+			color: #000;
+		}
+    .full{
+      width: 100%;  
+      height: 314px;  
+      
+    }
+		@media screen and (max-width: 645px) {
+			.item{
+				flex-direction: column;
+			}
+			.item .txt{
+				width: 100%;
+			}
+			.item .txt .img-rwd{
+				display: block;
+
+			}
+			.item .txt .paragraph{
+				padding: 20px 0 0;
+			}
+			.item .txt p{
+				padding: 0 40px;
+			}
+			.item .txt .title{
+				padding-bottom: 0;
+			}
+
+      .item a.full{
+        display:  none;
+      }
+
+
+
+
+
+
+
+
+
+			.footer{
+				flex-direction: column;
+			}
+			.footer .order{
+				order: 2;
+			}
+			.row{
+				justify-content: center;
+				
+			}
+			
+			.footer .contact{
+				flex-direction: column;
+				
+			}
+			.footer .contact .icon{
+				justify-content: center;
+			}
+			.footer .w-100{
+				max-width: 100%;
+				text-align: center;
+			}
+			.copyright{
+				padding: 0 0 30px;
+			}
+		}
+	</style>
+</head>
+<body>
+    <nav class="posfix navbar navbar-expand-lg navbar-light bg-light py-3  ">
+		<div class="name ml-4">
+			<div class="square"></div>
+		  <a class="navbar-brand   fontb ml-2" href="#">WIDIANSYAH<span class="fontn px-2">/ ORBIT FUTURE ACADEMY</span></a> 
+		</div>
+	  	
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-item nav-link  small active"href="tamplates\cv.html">ABOUT ME <span class="sr-only">(current)</span></a>
+	      <a class="nav-item nav-link small " href="D:\deployment\flask\tamplates\resume.html">RESUME</a>
+	      <a class="nav-item nav-link small " href="tamplates\project.html">PROJECTS</a>
+
+	      
+	    </div>
+	  </div>
+	</nav>
+	<div class="container-fluid bg-brown rwd">
+		<div class="container">
+			<div class="title-row">
+				<div class="square-bg"></div>
+				<div class="title"><h3>Projects</h3></div>
+			</div>
+			<div class="title-txt">
+				<p>Here are the project files I worked with, including the competition and classroom assignments.</p>
+			</div>
+			<div class="content">
+				<div class="item">
+					<div class="txt">
+						<div class="title">
+							<div class="square-left"></div>
+							<div class="title-content">
+								<h4>Carrefour Fresh Zone Plastic Reduction Program</h4>
+								<h5>Consumer Research/Market Survey</h5>
+							</div>
+						</div>
+						<div class="paragraph">
+							<p>We not only use offline solutions such as material substitution and small farmer area setup, but also use online gamification app to reduce the amount of plastic.</p>
+							<div class="img-rwd">
+								<img  src="https://i.ibb.co/fXyPGhx/123.png" alt="專案1" >
+							</div>
+						</div>
+					</div>
+					<div class="pic">
+						<a href="https://drive.google.com/file/d/1DbePNoM46QzWayPaQ2wNZc39G69ayDCQ/view?usp=sharing" class="full"></a>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="txt">
+						<div class="title">
+							<div class="square-left"></div>
+							<div class="title-content">
+								<h4>SAS Final Presentation</h4>
+								<h5>Digital Analytics</h5>
+							</div>
+						</div>
+						<div class="paragraph">
+							<p>We used data analysis software to help insurance companies identify appreciate markets</p>
+							<div class="img-rwd">
+								<img  src="https://i.ibb.co/bPTMrpP/1234.png" alt="專案2" >
+							</div>
+						</div>
+					</div>
+					<div class="pic-1">
+						<a href="https://drive.google.com/file/d/145SxQshB07l2LY85k-7yrrSxEsUL15vF/view?usp=sharing" class="full"></a>
+					</div>
+				</div>
+
+
+
+
+				<div class="item">
+					<div class="txt">
+						<div class="title">
+							<div class="square-left"></div>
+							<div class="title-content">
+								<h4>Campus Public Relations Competition</h4>
+								<h5>Consumer Research/Market Survey</h5>
+							</div>
+						</div>
+						<div class="paragraph">
+							<p>We used the insights we observed to create a series of PR campaigns for the upcoming Harry Potter mobile game.</p>
+							<div class="img-rwd">
+								<img  src="https://i.ibb.co/XtW5vZs/12345.png" alt="專案3" >
+							</div>
+						</div>
+					</div>
+					<div class="pic-2">
+						<a href="https://drive.google.com/file/d/145SxQshB07l2LY85k-7yrrSxEsUL15vF/view?usp=sharing" class="full"></a>
+					</div>
+				</div>
+
+
+
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="container-fluid bg-white">
+		<div class="row footer">
+			<div class="col-4 order w-100 mt-3">
+				<div class="copyright">		
+					<p></p>
+				</div>
+			</div>
+			<div class="col-8 w-100">
+				<div class="contact">
+					<div class="item">
+						<h3>Call</h3>
+						<p>031346754357</p>
+					</div>
+					<div class="item">
+						<h3>email</h3>
+						<p>31diansyah@gmail.com</p>
+					</div>
+					<div class="item">
+						<h3>Follow</h3>
+						<div class="icon">
+							<a href="https://www.facebook.com/widinsyah.widinsyah?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.instagram.com/widiansyah5.0/"><i class="fa fa-instagram"></i></a>
+							<a href="https://www.linkedin.com/in/muhammad-widiansyah-5b97a7236/"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+
+		
+	
+	
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

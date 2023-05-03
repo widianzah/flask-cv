@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<title>Document</title>
+	<style type="text/css">
+		 .nav-item:hover{
+			color: #007bff!important;
+		}
+		
+		#navbarNavAltMarkup{
+			transition: .3s;
+		}
+		.active{
+			color: #007bff!important;
+		}
+		.square{
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-color: #0050ff;
+			align-self: center;
+
+			
+
+		}
+		.square-bg{
+			display: block;
+			width: 15px;
+			height: 15px;
+			background-color: #0050ff;
+			align-self: center;
+			margin: 0 5px -2px;
+		}
+		.intro-bg{
+			background-color: rgba(198,191,184);
+
+		}
+
+		.pr{
+			position: relative;
+		}
+		.fontb{
+			font-family: 'Anton', sans-serif;
+			font-size: 22px;
+		}
+		.fontn{
+			font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+		}
+		.name{
+			display: flex;
+		}
+		
+		
+		.posfix{
+				position: fixed;
+				top: 0;
+				
+				width: 100%;
+				z-index: 1;
+				box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+			}
+		.rwd{
+			margin-top: 74.8px;
+		}
+		.bg-brown{
+			background-color: rgba(230,218,206);
+		}
+		.container{
+			max-width: 100%;
+			margin:  auto ;
+			padding: 100px 0;
+
+		}
+		.container .title{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			padding: 50px 0;
+		}
+		.content{
+			margin: 50px auto;
+			max-width: 550px;
+		}
+		.item-ex{
+			margin-top: 50px;
+		}
+		.sm-title{
+			font-weight: bold;
+			padding: 0 0 30px 0 ;
+		}
+		.item-ex{
+			background-color: #fff;
+			padding: 60px 30px;
+			display: flex;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+		}
+		.item-ex .brief{
+			width: 50%;
+			padding: 0 20px;
+		}
+
+		.brief h4{
+			font-size: 16px;
+			font-weight: bold;
+			color: #0050ff;
+
+		}
+		.brief .jobpos p{
+			font-weight: bold;
+			font-size: 14px;
+			margin: 2px 0;
+
+		}
+		.brief .co-name p{
+			font-size: 14px;
+		}
+		.item-ex .info{
+			width: 50%;
+			margin-top: 30px;
+
+		}
+		.item-ex .info p{
+			font-size: 14px;
+		}
+		.item-skill{
+			background-color: #fff;
+			padding: 60px 30px;
+			box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+		}
+		.skill-row+.skill-row{
+			width: 100%;
+			padding: 30px 0 0;
+			
+		}
+		.skill{
+			width: 50%;
+			display: flex;
+			align-items: center;
+		}
+		.skill p{
+			margin: 0;
+			font-size: 14px;
+		}
+		.skill .square{
+			margin: 2px 5px 0;
+			
+		}
+		.footer{
+			padding: 30px 50px 0;
+		}
+		.footer .copyright p{
+			margin-bottom: 0;
+		}
+		.footer .contact{
+
+			display: flex;
+			justify-content: flex-end;
+		}
+		.footer .contact p{
+			line-height: 32px;
+		}
+		.contact .item{
+			margin: 0 15px;
+			text-align: center;
+		}
+		.footer.item h3{
+			font-size: 16px;
+		}
+		.footer .item p{
+			font-size: 12px;
+		}
+		.footer .item .icon{
+			display: flex;
+		}
+		.item a{
+			display: block;
+			padding: 0 5px;
+			text-decoration: none;
+			color: #000;
+		}
+		@media screen and (max-width: 645px) {
+			.container{
+				width: 100%;
+			}
+			.sm-title h3{
+				text-align: center;
+			}
+			.item-ex{
+				flex-direction: column;
+				align-items: center;
+			}
+			.item-ex .brief{
+				width: 100%;
+				text-align: center;
+			}
+			.item-ex .info{
+				width: 100%;
+			}
+
+
+
+
+
+
+
+
+
+
+
+			.footer{
+				flex-direction: column;
+			}
+			.footer .order{
+				order: 2;
+			}
+			.row{
+				justify-content: center;
+				
+			}
+			
+			.footer .contact{
+				flex-direction: column;
+				
+			}
+			.footer .contact .icon{
+				justify-content: center;
+			}
+			.footer .w-100{
+				max-width: 100%;
+				text-align: center;
+			}
+			.copyright{
+				padding: 0 0 30px;
+			}
+		}
+	</style>
+</head>
+<body>
+    <nav class="posfix navbar navbar-expand-lg navbar-light bg-light py-3  ">
+		<div class="name ml-4">
+			<div class="square"></div>
+		  <a class="navbar-brand   fontb ml-2" href="#">WIDIANSYAH<span class="fontn px-2">/ ORBIT FUTURE ACADEMY</span></a> 
+		</div>
+	  	
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-item nav-link  small active"href="cv.html">ABOUT ME <span class="sr-only">(current)</span></a>
+	      <a class="nav-item nav-link small " href="resume.html">RESUME</a>
+	      <a class="nav-item nav-link small " href="project.html">PROJECTS</a>
+
+	      
+	    </div>
+	  </div>
+	</nav>
+	<div class="container-fluid rwd bg-brown">
+		<div class="container">
+			<div class="title">
+				<div class="square-bg"></div>
+				<h2 style="margin: 0">Resume</h2>
+			</div>
+			<div class="content">
+				<div class="sm-title">
+					<h3>Work Experience</h3>
+				</div>
+				<div class="item-ex">
+					<div class="brief">
+						<div class="time">
+							<h4>2022</h4>
+						</div>
+						<div class="jobpos">
+							<p>DATA SCIENTIS</p>
+						</div>
+						<div class="co-name">
+							<p>HOME CREDIT INDONESIA</p>
+						</div>
+					</div>
+					<div class="info">
+						<p>For one month I had the opportunity to be part of Interenship as a Data Scientist. I process data using excel, SQL and python</p>
+					</div>
+				</div>
+
+
+
+			<div class="content">
+				<div class="sm-title">
+					<h3>Competition</h3>
+				</div>
+				<div class="item-ex">
+					<div class="brief">
+						<div class="time">
+							<h4>2023</h4>
+						</div>
+						<div class="jobpos">
+							<p> OFA AI Mastery Computer Vision </p>
+						</div>
+						
+					</div>
+					<div class="info">
+						<p>Develop computer-aided recognition for classification of animal species based on the images provided.</p>
+					</div>
+				</div>
+
+
+			<div class="content">
+				<div class="sm-title">
+					<h3>Skillset</h3>
+				</div>
+				<div class="item-skill">
+					<div class="skill-row  d-flex" >
+						<div class="skill" >
+							<div class="square"></div>
+							<p>TABLUE</p>
+						</div>
+						<div class="skill">
+							<div class="square"></div>
+							<p>PYTHON PROGREMING</p>
+						</div>
+					</div>
+					<div class="skill-row d-flex">
+						<div class="skill">
+							<div class="square"></div>
+							<p>UI/UX DISGNER</p>
+						</div>
+						<div class="skill">
+							<div class="square"></div>
+							<p>ENGLISH</p>
+						</div>
+                    </div>
+                    <div class="skill-row d-flex">
+                        <div class="skill">
+                            <div class="square"></div>
+                            <p>Hard worker</p>
+                        </div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+		<div class="container-fluid bg-white">
+			<div class="row footer">
+                <div class="col-4 order w-100 mt-3">
+                    <div class="copyright">		
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-8 w-100">
+                    <div class="contact">
+                        <div class="item">
+                            <h3>Call</h3>
+                            <p>031346754357</p>
+                        </div>
+                        <div class="item">
+                            <h3>email</h3>
+                            <p>31diansyah@gmail.com</p>
+						</div>
+						<div class="item">
+							<h3>Follow</h3>
+                                <div class="icon">
+                                    <a href="https://www.facebook.com/widinsyah.widinsyah?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/widiansyah5.0/"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/muhammad-widiansyah-5b97a7236/"><i class="fa fa-linkedin"></i></a>
+                                </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	
+	
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
